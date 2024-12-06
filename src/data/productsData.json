@@ -1,0 +1,69 @@
+{
+    "flashSale": [
+        {
+            "title":"HAVIT HV-G92 Gamepad",
+            "newPrice":120,
+            "prevPrice":160,
+            "discountPercent":40,
+            "ratting":88,
+            "imgSrc":"/g92-2-500x500 1.png"
+        },
+        {
+            "title":"AK-900 Wired Keyboard",
+            "newPrice":960,
+            "prevPrice":1160,
+            "discountPercent":35,
+            "ratting":75,
+            "imgSrc":"/ak-900-01-500x500 1.png"
+        },
+        {
+            "title":"IPS LCD Gaming Monitor",
+            "newPrice":370,
+            "prevPrice":400,
+            "discountPercent":30,
+            "ratting":90,
+            "imgSrc":"/g27cq4-500x500 1.png"
+        },
+        {
+            "title":"S-Series Comfort Chair ",
+            "newPrice":370,
+            "prevPrice":400,
+            "discountPercent":25,
+            "ratting":99,
+            "imgSrc":"/sam-moghadam-khamseh-kvmdsTrGOBM-unsplash 1.png"
+        }
+    ],
+    "categories": [
+        {
+            "id": 1,
+            "name": "Phones",
+            "imgSrc": "/icons/Category-CellPhone.svg"
+        },
+        {
+            "id": 2,
+            "name": "Computers",
+            "imgSrc": "/icons/Category-Computer.svg"
+        },
+        {
+            "id": 3,
+            "name": "SmartWatch",
+            "imgSrc": "/icons/Category-SmartWatch.svg"
+        },
+        {
+            "id": 4,
+            "name": "Camera",
+            "imgSrc": "/icons/Category-Camera.svg"
+        },
+        {
+            "id": 5,
+            "name": "HeadPhones",
+            "imgSrc": "/icons/Category-Headphone.svg"
+        },
+      
+        {
+            "id": 6,
+            "name": "Gaming",
+            "imgSrc": "/icons/Category-Gamepad.svg"
+        }
+    ]
+}
