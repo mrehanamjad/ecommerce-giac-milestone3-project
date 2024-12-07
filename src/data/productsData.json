@@ -65,5 +65,109 @@
             "name": "Gaming",
             "imgSrc": "/icons/Category-Gamepad.svg"
         }
+    ],
+    "bestSellingProducts":[
+            {
+                "title":"The north coat",
+                "newPrice": 260,
+                "prevPrice": 360,
+                "ratting": 65,
+                "imgSrc":"/672462_ZAH9D_5626_002_100_0000_Light-The-North-Face-x-Gucci-coat 1.png"
+            },
+            {
+                "title":"Gucci duffle bag",
+                "newPrice": 960,
+                "prevPrice": 1160,
+                "ratting": 65,
+                "imgSrc":"/547953_9C2ST_8746_001_082_0000_Light-Gucci-Savoy-medium-duffle-bag 1.png"
+            },
+            {
+                "title":"RGB liquid CPU Cooler",
+                "newPrice": 160,
+                "prevPrice": 170,
+                "ratting": 65,
+                "imgSrc":"/gammaxx-l240-argb-1-500x500 1.png"
+            },
+            {
+                "title":"Small BookSelf",
+                "newPrice": 360,
+                "prevPrice": 400,
+                "ratting": 65,
+                "imgSrc":"/sam-moghadam-khamseh-L_7MQsHl_aU-unsplash 1.png"
+            }
+    ],
+    "exploreOurProducts1": [
+        {
+            "title":"Breed Dry Dog Food",
+            "newPrice": 100,
+            "ratting": 35,
+            "imgSrc":"/71RdoeXxtrL 1.png"
+        },
+        {
+            "title":"CANON EOS DSLR Camera",
+            "newPrice": 360,
+            "ratting": 95,
+            "imgSrc":"/eos-250d-03-500x500 1.png"
+        },
+        {
+            "title":"ASUS FHD Gaming Laptop",
+            "newPrice": 700,
+            "ratting": 325,
+            "imgSrc":"/ideapad-gaming-3i-01-500x500 1.png"
+        },
+        {
+            "title":"Curology Product Set ",
+            "newPrice": 500,
+            "ratting": 145,
+            "imgSrc":"/curology-j7pKVQrTUsM-unsplash 1.png"
+        }
+    ],
+    "exploreOurProducts2": [
+        {
+            "title":"Kids Electric Car",
+            "newPrice": 965,
+            "ratting": 65,
+            "imgSrc":"/New-Mercedes-Benz-Gtr-Licensed-Ride-on-Car-Kids-Electric-Toy-Car 1.png"
+        },
+        {
+            "title":"Jr. Zoom Soccer Cleats",
+            "newPrice": 1160,
+            "ratting": 35,
+            "imgSrc":"/Copa_Sense 1.png"
+        },
+        {
+            "title":"GP11 Shooter USB Gamepad",
+            "newPrice": 660,
+            "ratting": 55,
+            "imgSrc":"/GP11_PRD3 1.png"
+        },
+        {
+            "title":"Quilted Satin Jacket",
+            "newPrice": 660,
+            "ratting": 55,
+            "imgSrc":"/Frame 608.png"
+        }
+    ],
+    "featured": [
+        {
+            "title": "PlayStation 5",
+            "description": "Black and White version of the PS5 coming out on sale.",
+            "imgSrc": "/featuredGrid/Frame 684.png"
+        },
+        {
+            "title": "Women’s Collections",
+            "description": "Featured woman collections that give you another vibe.",
+            "imgSrc": "/featuredGrid/Frame 685.png"
+        },
+        {
+            "title": "Speakers",
+            "description": "Amazon wireless speakers",
+            "imgSrc": "/featuredGrid/Frame 686.png"
+        },
+        {
+            "title": "Perfume",
+            "description": "GUCCI INTENSE OUD EDP",
+            "imgSrc": "/featuredGrid/Frame 687.png"
+        }
     ]
 }

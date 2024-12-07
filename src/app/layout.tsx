@@ -4,6 +4,7 @@ import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Top from "@/components/Top";
+import Footer from "@/components/Footer";
 
 // Import Inter font
 const inter = Inter({
@@ -52,6 +53,7 @@ export default function RootLayout({
         <Top />
         <Nav />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

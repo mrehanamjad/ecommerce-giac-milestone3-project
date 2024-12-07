@@ -44,19 +44,20 @@ const ProductCard = ({title,newPrice,prevPrice,ratting,discountPercent,imgSrc}:{
       
         <div className='absolute bottom-0 left-0 h-8 w-full bg-button text-Title-16PX-Mediam text-white hidden group-hover:flex justify-center items-center '>Add To Cart</div>
     </div>
-      <div className="p-4">
+      <div className="px-4 py-2">
         <h3 className="text-Title-16PX-SemiBold mb-2 truncate">
         {title}
         </h3>
+        <div className={`${!prevPrice && "flex gap-2 items-center "}`}>
         <div className="flex items-center gap-2 mb-2">
           <span className="text-lg font-bold text-secondary2">
             ${newPrice}
           </span>
-          <span className="text-gray-500 line-through text-sm">
+         {prevPrice && <span className="text-gray-500 line-through text-sm">
             ${prevPrice}
-          </span>
+          </span>}
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center mb-2">
           {[10, 20, 40, 60, 80].map((star) => (
             <Star 
               key={star} 
@@ -65,6 +66,7 @@ const ProductCard = ({title,newPrice,prevPrice,ratting,discountPercent,imgSrc}:{
             />
           ))}
           <span className="ml-2 text-sm text-gray-600">({ratting})</span>
+        </div>
         </div>
       </div>
     </div>

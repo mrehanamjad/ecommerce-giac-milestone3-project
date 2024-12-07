@@ -71,12 +71,16 @@ const config: Config = {
   			'Heading-48PX-SemiBold': ["48px",{ lineHeight: "60px", fontWeight: "600", letterSpacing: "4px" },],
   			'Heading-36PX-SemiBold': ["36px",{ lineHeight: "48px", fontWeight: "600", letterSpacing: "4px" },],
   			'Heading-24PX-Bold': ["24px",{ lineHeight: "24px", fontWeight: "700", letterSpacing: "3px" },],
+  			'Heading-24PX-SemiBold': ["24px",{ lineHeight: "24px", fontWeight: "600", letterSpacing: "3px" },],
+  			'Title-20PX-SemiBold': ["20px",{ lineHeight: "28px", fontWeight: "600", letterSpacing: "0"},],
   			'Title-16PX-SemiBold': ["16px",{ lineHeight: "20px", fontWeight: "600", letterSpacing: "0"},],
   			'Title-16PX-Mediam': ["16px",{ lineHeight: "24px", fontWeight: "500", letterSpacing: "0"},],
   			'Title-16PX-Regular': ["16px",{ lineHeight: "24px", fontWeight: "400", letterSpacing: "0"},],
   			'Title-14PX-Regular': ["14px",{ lineHeight: "21px", fontWeight: "400", letterSpacing: "0"},],
+  			'Title-14PX-Mediam': ["14px",{ lineHeight: "21px", fontWeight: "500", letterSpacing: "0"},],
   			'Title-14PX-SemiBold': ["14px",{ lineHeight: "21px", fontWeight: "600", letterSpacing: "0"},],
   			'Title-12PX-Regular': ["12px",{ lineHeight: "18px", fontWeight: "400", letterSpacing: "0"},],
+  			'Title-11PX-Light': ["11px",{ lineHeight: "15px", fontWeight: "300", letterSpacing: "0"},],
         
       },
   		fontFamily: {
