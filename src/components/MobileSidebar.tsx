@@ -1,35 +1,33 @@
-import React from 'react';
-import Link from 'next/link';
-import Logo from './Logo';
-import { 
-  X, 
-  Search, 
-  Heart, 
-  ShoppingCart, 
-  User 
-} from "lucide-react";
+import React from "react";
+import Link from "next/link";
+import Logo from "./Logo";
+import { X, Search, Heart, ShoppingCart, User } from "lucide-react";
 
-const MobileSidebar = ({ 
-  isOpen, 
-  onClose, 
+const MobileSidebar = ({
+  isOpen,
+  onClose,
   navItems = [
     { name: "Home", slug: "/" },
     { name: "Contact", slug: "/contact" },
     { name: "About", slug: "/about" },
     { name: "Signup", slug: "/signup" },
-  ] 
-}:any) => {
+  ],
+}: {
+  isOpen: boolean;
+  onClose: () => void;
+  navItems?: { name: string; slug: string }[];
+}) => {
   // Prevent body scroll when sidebar is open
   React.useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
 
     // Clean up on unmount
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     };
   }, [isOpen]);
 
@@ -37,18 +35,18 @@ const MobileSidebar = ({
     <>
       {/* Overlay */}
       {isOpen && (
-        <div 
+        <div
           className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
           onClick={onClose}
         />
       )}
 
       {/* Sidebar */}
-      <div 
+      <div
         className={`
           fixed top-0 left-0 w-[80%] h-full bg-white 
           transform transition-transform duration-300 z-50
-          ${isOpen ? 'translate-x-0' : '-translate-x-full'}
+          ${isOpen ? "translate-x-0" : "-translate-x-full"}
           shadow-2xl
         `}
       >
@@ -56,7 +54,7 @@ const MobileSidebar = ({
           {/* Sidebar Header */}
           <div className="flex justify-between items-center p-4 border-b">
             <Logo />
-            <button 
+            <button
               onClick={onClose}
               className="p-2 hover:bg-gray-100 rounded-full"
               aria-label="Close Menu"
@@ -67,7 +65,7 @@ const MobileSidebar = ({
 
           {/* Navigation Links */}
           <nav className="flex-grow p-4 space-y-4 overflow-y-auto">
-            {navItems?.map((item:any) => (
+            {navItems?.map((item: any) => (
               <Link
                 key={item.slug}
                 href={item.slug}
@@ -81,25 +79,33 @@ const MobileSidebar = ({
 
           {/* Sidebar Footer with Quick Actions */}
           <div className="p-4 border-t flex justify-center space-x-6">
-            <QuickActionButton 
-              icon={<Search size={24} />} 
-              label="Search" 
-              onClick={() => {/* Implement search action */}}
+            <QuickActionButton
+              icon={<Search size={24} />}
+              label="Search"
+              onClick={() => {
+                /* Implement search action */
+              }}
             />
-            <QuickActionButton 
-              icon={<User size={24} />} 
-              label="User Account" 
-              onClick={() => {/* Implement user account action */}}
+            <QuickActionButton
+              icon={<User size={24} />}
+              label="User Account"
+              onClick={() => {
+                /* Implement user account action */
+              }}
             />
-            <QuickActionButton 
-              icon={<Heart size={24} />} 
-              label="Wishlist" 
-              onClick={() => {/* Implement wishlist action */}}
+            <QuickActionButton
+              icon={<Heart size={24} />}
+              label="Wishlist"
+              onClick={() => {
+                /* Implement wishlist action */
+              }}
             />
-            <QuickActionButton 
-              icon={<ShoppingCart size={24} />} 
-              label="Shopping Cart" 
-              onClick={() => {/* Implement cart action */}}
+            <QuickActionButton
+              icon={<ShoppingCart size={24} />}
+              label="Shopping Cart"
+              onClick={() => {
+                /* Implement cart action */
+              }}
             />
           </div>
         </div>
@@ -109,8 +115,8 @@ const MobileSidebar = ({
 };
 
 // Reusable Quick Action Button Component
-const QuickActionButton = ({ icon, label, onClick }:any) => (
-  <button 
+const QuickActionButton = ({ icon, label, onClick }: any) => (
+  <button
     className="p-2 hover:bg-gray-100 rounded-full transition-colors"
     aria-label={label}
     onClick={onClick}

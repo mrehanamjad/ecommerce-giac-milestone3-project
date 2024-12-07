@@ -1,7 +1,5 @@
-import Container from "@/components/Container";
 import Hero from "@/components/Hero";
 import ProductSection from "@/components/ProductSection";
-import Image from "next/image";
 import ProductCard from "@/components/ProductCard";
 import productsData from "@/data/productsData.json";
 import CategoryCard from "@/components/CategoryCard";

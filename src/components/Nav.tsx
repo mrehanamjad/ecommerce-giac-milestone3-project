@@ -6,34 +6,15 @@ import Link from "next/link";
 import MobileSidebar from "./MobileSidebar";
 import { 
   Menu, 
-  Search, 
-  Heart, 
-  ShoppingCart, 
-  User, 
   X
 } from "lucide-react";
 
 function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  useEffect(() => {
-    // Handle scroll effect
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    // Add event listener
-    window.addEventListener('scroll', handleScroll);
-    
-    // Clean up event listener
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
   const navItems = [
     { name: "Home", slug: "/" },
     { name: "Contact", slug: "/" },
