@@ -65,7 +65,7 @@ const MobileSidebar = ({
 
           {/* Navigation Links */}
           <nav className="flex-grow p-4 space-y-4 overflow-y-auto">
-            {navItems?.map((item: any) => (
+            {navItems?.map((item: { name: string; slug: string }) => (
               <Link
                 key={item.slug}
                 href={item.slug}
@@ -114,8 +114,12 @@ const MobileSidebar = ({
   );
 };
 
-// Reusable Quick Action Button Component
-const QuickActionButton = ({ icon, label, onClick }: any) => (
+interface QuickActionButtonProps {
+  icon: React.ReactNode;
+  label: string;
+  onClick: () => void;
+}
+const QuickActionButton: React.FC<QuickActionButtonProps> = ({ icon, label, onClick }) => (
   <button
     className="p-2 hover:bg-gray-100 rounded-full transition-colors"
     aria-label={label}

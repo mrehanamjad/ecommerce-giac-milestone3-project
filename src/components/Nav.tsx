@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Container from "./Container";
 import Logo from "./Logo";
 import Link from "next/link";
