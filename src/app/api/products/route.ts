@@ -186,7 +186,7 @@ export async function GET() {
       return NextResponse.json({ products }, { status: 200 });
     } catch (error) {
       return NextResponse.json(
-        { error: 'Failed to fetch products' },
+        { error: 'Failed to fetch products :: '+ error},
         { status: 500 }
       );
     }
