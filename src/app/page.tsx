@@ -5,17 +5,17 @@ import CategoryCard from "@/components/CategoryCard";
 import MusicProductSection from "@/components/MusicProductSection";
 import FeaturedProductCard from "@/components/FeaturedProductCard";
 import ServiceSection from "@/components/ServiceSection";
-import productData from "@/data/productsData.json"
+import { ProductI } from "@/lib/types";
 
-// const fetchProducts = async () => {
-//   try {
-//     const res = await fetch("https://ecommerce-giac-milestone3-project-43wxbv20p.vercel.app//api/products");
-//     const data = await res.json();
-//     return data.products;
-//   } catch (error) {
-//     console.log("error: " , error);
-//   }
-// }
+const fetchProducts = async () => {
+  try {const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
+    const res = await fetch(`${baseUrl}/api/products`);
+    const data = await res.json();
+    return data.products;
+  } catch (error) {
+    console.log("error: " , error);
+  }
+}
 
   const categories = [
         {
@@ -54,20 +54,20 @@ import productData from "@/data/productsData.json"
  const Home = async () => {
  
 
-  // const products: ProductI[] = await fetchProducts();
+  const products: ProductI[] = await fetchProducts();
   
 
-  // const flashSale = products?.slice(0, 4);
-  // const bestSellingProducts = products?.slice(4, 8);
-  // const exploreOurProducts1 = products?.slice(8, 12);
-  // const exploreOurProducts2 = products?.slice(12, 16);
-  // const featured = products?.slice(16, 20);
+  const flashSale = products?.slice(0, 4);
+  const bestSellingProducts = products?.slice(4, 8);
+  const exploreOurProducts1 = products?.slice(8, 12);
+  const exploreOurProducts2 = products?.slice(12, 16);
+  const featured = products?.slice(16, 20);
 
-   const flashSale = productData.flashSale;
-  const bestSellingProducts = productData.bestSellingProducts;
-  const exploreOurProducts1 = productData.exploreOurProducts1;
-  const exploreOurProducts2 = productData.exploreOurProducts2;
-  const featured = productData.featured;
+  //  const flashSale = productData.flashSale;
+  // const bestSellingProducts = productData.bestSellingProducts;
+  // const exploreOurProducts1 = productData.exploreOurProducts1;
+  // const exploreOurProducts2 = productData.exploreOurProducts2;
+  // const featured = productData.featured;
 
   return (
       <div className="w-full min-h-screen pb-14">
@@ -126,16 +126,16 @@ import productData from "@/data/productsData.json"
         <ProductSection sectionTitle="Featured" sectionHeading="New Arrival" topRight="btn">
            <div className="w-full h-[37.5rem] gap-6 py-4 grid grid-cols-4 lg:grid-rows-2">
               <div className="w-full h-full col-span-4 sm:col-span-2 lg:row-span-2">
-                <FeaturedProductCard {...featured[0]} />
+                {featured &&<FeaturedProductCard {...featured[0]} />}
               </div>
               <div className="w-full h-full col-span-4 sm:col-span-2 lg:row-span-1 bg-blue-300">
-                <FeaturedProductCard {...featured[1]} />
+                {featured && <FeaturedProductCard {...featured[1]} />}
               </div>
               <div className="w-full h-full col-span-4 lg:col-span-1 lg:row-span-1 bg-yellow-400">
-                <FeaturedProductCard {...featured[2]} />
+                {featured && <FeaturedProductCard {...featured[2]} />}
               </div>
               <div className="w-full h-full col-span-4 lg:col-span-1 lg:row-span-1 bg-orange-500">
-                <FeaturedProductCard {...featured[3]} />
+                {featured && <FeaturedProductCard {...featured[3]} />}
               </div>
             </div>
         </ProductSection>
