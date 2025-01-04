@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Minus, Plus, X } from 'lucide-react';
 import Container from '@/components/Container';
+import Image from 'next/image';
 
 interface CartItem {
   id: string;
@@ -63,9 +64,11 @@ const ShoppingCart = () => {
                 >
                   <X size={20} />
                 </button>
-                <img 
+                <Image 
                   src={item.image} 
                   alt={item.name} 
+                  height={300}
+                  width={300}
                   className="w-20 h-16 object-cover rounded"
                 />
                 <span className="font-medium">{item.name}</span>
