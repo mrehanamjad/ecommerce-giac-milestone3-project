@@ -5,17 +5,17 @@ import CategoryCard from "@/components/CategoryCard";
 import MusicProductSection from "@/components/MusicProductSection";
 import FeaturedProductCard from "@/components/FeaturedProductCard";
 import ServiceSection from "@/components/ServiceSection";
-import { ProductI } from "@/lib/types";
+import productData from "@/data/productsData.json"
 
-const fetchProducts = async () => {
-  try {
-    const res = await fetch("https://ecommerce-giac-milestone3-project-43wxbv20p.vercel.app//api/products");
-    const data = await res.json();
-    return data.products;
-  } catch (error) {
-    console.log("error: " , error);
-  }
-}
+// const fetchProducts = async () => {
+//   try {
+//     const res = await fetch("https://ecommerce-giac-milestone3-project-43wxbv20p.vercel.app//api/products");
+//     const data = await res.json();
+//     return data.products;
+//   } catch (error) {
+//     console.log("error: " , error);
+//   }
+// }
 
   const categories = [
         {
@@ -54,15 +54,20 @@ const fetchProducts = async () => {
  const Home = async () => {
  
 
-  const products: ProductI[] = await fetchProducts();
+  // const products: ProductI[] = await fetchProducts();
   
 
-  const flashSale = products?.slice(0, 4);
-  const bestSellingProducts = products?.slice(4, 8);
-  const exploreOurProducts1 = products?.slice(8, 12);
-  const exploreOurProducts2 = products?.slice(12, 16);
-  const featured = products?.slice(16, 20);
+  // const flashSale = products?.slice(0, 4);
+  // const bestSellingProducts = products?.slice(4, 8);
+  // const exploreOurProducts1 = products?.slice(8, 12);
+  // const exploreOurProducts2 = products?.slice(12, 16);
+  // const featured = products?.slice(16, 20);
 
+   const flashSale = productData.flashSale;
+  const bestSellingProducts = productData.bestSellingProducts;
+  const exploreOurProducts1 = productData.exploreOurProducts1;
+  const exploreOurProducts2 = productData.exploreOurProducts2;
+  const featured = productData.featured;
 
   return (
       <div className="w-full min-h-screen pb-14">
