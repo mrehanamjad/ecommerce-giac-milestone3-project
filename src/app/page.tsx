@@ -9,7 +9,7 @@ import { ProductI } from "@/lib/types";
 
 const fetchProducts = async () => {
   try {
-    const res = await fetch("/api/products");
+    const res = await fetch("https://ecommerce-giac-milestone3-project-43wxbv20p.vercel.app//api/products");
     const data = await res.json();
     return data.products;
   } catch (error) {
@@ -57,11 +57,11 @@ const fetchProducts = async () => {
   const products: ProductI[] = await fetchProducts();
   
 
-  const flashSale = products.slice(0, 4);
-  const bestSellingProducts = products.slice(4, 8);
-  const exploreOurProducts1 = products.slice(8, 12);
-  const exploreOurProducts2 = products.slice(12, 16);
-  const featured = products.slice(16, 20);
+  const flashSale = products?.slice(0, 4);
+  const bestSellingProducts = products?.slice(4, 8);
+  const exploreOurProducts1 = products?.slice(8, 12);
+  const exploreOurProducts2 = products?.slice(12, 16);
+  const featured = products?.slice(16, 20);
 
 
   return (
@@ -69,7 +69,7 @@ const fetchProducts = async () => {
         <Hero />
         <ProductSection sectionTitle="Today's" sectionHeading="Flash Sales" btnText="View All Products">
            <div className="flex justify-between gap-3 overflow-x-scroll w-full py-4 sm:overflow-x-auto">
-              {flashSale.map((product, index) => (
+              {flashSale?.map((product, index) => (
                 <div key={index} className="">
                   <ProductCard {...product} />
                 </div>
@@ -78,7 +78,7 @@ const fetchProducts = async () => {
         </ProductSection>
         <ProductSection sectionTitle="Categories" sectionHeading="Browse By Category">
         <div className="flex justify-between gap-3 overflow-x-scroll w-full py-4 sm:overflow-x-auto">
-              {categories.map((category) => (
+              {categories?.map((category) => (
                 <div key={category.id} className="">
                   <CategoryCard {...category} />
                 </div>
@@ -87,7 +87,7 @@ const fetchProducts = async () => {
         </ProductSection>
         <ProductSection sectionTitle="This Month" sectionHeading="Best Selling Products" btnText="View All" topRight="btn">
            <div className="flex justify-between gap-3 overflow-x-scroll w-full py-4 sm:overflow-x-auto">
-              {bestSellingProducts.map((product, index) => (
+              {bestSellingProducts?.map((product, index) => (
                 <div key={index} className="">
                   <ProductCard {...product}  />
                 </div>
@@ -101,14 +101,14 @@ const fetchProducts = async () => {
            <div className="flex justify-between  overflow-x-scroll w-full py-4 sm:overflow-x-auto">
             <div>
               <div className="flex gap-3 justify-between items-center">
-              {exploreOurProducts1.map((product, index) => (
+              {exploreOurProducts1?.map((product, index) => (
                 <div key={index} className="">
                   <ProductCard {...product}  />
                 </div>
               ))}
               </div>
               <div className="flex gap-3 justify-between items-center mt-4">
-              {exploreOurProducts2.map((product, index) => (
+              {exploreOurProducts2?.map((product, index) => (
                 <div key={index} className="">
                   <ProductCard {...product}  />
                 </div>
